@@ -2,7 +2,7 @@
 # ArrayBuffer.fillRandom - A CSPRNG for ECMAScript
 
 This proposes the addition of a `fillRandom` static method to the global `ArrayBuffer` object that can be used to fill the 
-portion of an `ArrayBuffer` associated with a `TypedArray` or `DataView` with cryptographically-secure pseudo-random values.
+portion of an `ArrayBuffer` associated with a `TypedArray` or `DataView` with cryptographically secure pseudo-random values.
 
 Portions of this proposal are derived from the [Web Cryptography API](https://w3c.github.io/webcrypto/#Crypto-method-getRandomValues)
 <!--#endregion:intro-->
@@ -32,7 +32,7 @@ language itself has no mechanism for supplying a CSPRNG that can be used by prop
 
 ### Goals
 
-* Provide a single "source of truth" for generating cryptographically-secure pseudo-random values within the language.
+* Provide a single "source of truth" for generating cryptographically secure pseudo-random values within the language.
 * Provides a single location for mocking the CSPRNG, vs a method on each `TypedArray` prototype.
 * Does not introduce a new global namespace for cryptography, as specifying a `crypto` global in ECMA-262 could cause complications with how to specify it such that the Web cryptography APIs could be layered on top.
 <!--#endregion:motivations-->
@@ -90,14 +90,14 @@ When `ArrayBuffer.fillRandom` is called with argument _view_, the following step
 1. If _byteLength_ is greater than 65536, throw a **RangeError** exception.
 1. Let _byteOffset_ be _view_.\[\[ByteOffset]].
 1. Let _byteEndOffset_ be _byteOffset_ + _byteLength_.
-1. Overwrite the elements of _buffer_ from index _byteOffset_ (inclusive) through index _byteEndOffset_ (exclusive) with cryptographically random values.
+1. Overwrite the elements of _buffer_ from index _byteOffset_ (inclusive) through index _byteEndOffset_ (exclusive) with cryptographically secure random values.
 1. Return _view_.
 
 > **Note**  
-> Implementations should generate cryptographically random values using well-established cryptographic pseudo-random number generators seeded with high-quality entropy, such as from an operating-system entropy source (e.g., "/dev/urandom"). This specification provides no lower-bound on the information theoretic entropy present in cryptographically random values, but implementations should make a best effort to provide as much entropy as practicable.
+> Implementations should generate cryptographically secure random values using well-established cryptographic pseudo-random number generators seeded with high-quality entropy, such as from an operating-system entropy source (e.g., "/dev/urandom"). This specification provides no lower-bound on the information theoretic entropy present in cryptographically secure random values, but implementations should make a best effort to provide as much entropy as practicable.
 
 > **Note**  
-> This interface defines a synchronous method for obtaining cryptographically random values. While some devices and implementations may support truly random cryptographic number generators or provide interfaces that block when there is insufficient entropy, implementations are discouraged from using these sources when implementing getRandomValues, both for performance and to avoid depleting the system of entropy. Instead, these sources should be used to seed a cryptographic pseudo-random number generator that can then return suitable values efficiently.
+> This interface defines a synchronous method for obtaining cryptographically secure random values. While some devices and implementations may support truly random cryptographic number generators or provide interfaces that block when there is insufficient entropy, implementations are discouraged from using these sources when implementing getRandomValues, both for performance and to avoid depleting the system of entropy. Instead, these sources should be used to seed a cryptographic pseudo-random number generator that can then return suitable values efficiently.
 <!--#endregion:api-->
 
 <!--#region:grammar-->
