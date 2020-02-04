@@ -1,0 +1,27 @@
+{
+  "name": "proposal-arraybuffer-fillrandom",
+  "version": "0.0.0",
+  "private": true,
+  "description": "ArrayBuffer.fillRandom - CSRNG for ECMAScript",
+  "homepage": "https://github.com/rbuckton/proposal-arraybuffer-fillrandom#readme",
+  "author": {
+    "name": "Ron Buckton",
+    "email": "ron.buckton@microsoft.com"
+  },
+  "keywords": [
+    "javascript",
+    "ecmascript"
+  ],
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "license": "SEE LICENSE IN https://tc39.github.io/ecma262/#sec-copyright-and-software-license",
+  "devDependencies": {
+    "ecmarkup": "^3.16.0",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-emu": "^1.2.0",
+    "gulp-live-server": "^0.0.31"
+  }
+}

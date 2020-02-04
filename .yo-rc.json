@@ -1,0 +1,21 @@
+{
+  "generator-ecmascript-proposal": {
+    "promptValues": {
+      "hasChampion": true,
+      "championName": "Ron Buckton",
+      "championGithub": "rbuckton",
+      "spec": "https://rbuckton.github.io/proposal-arraybuffer-fillrandom",
+      "stage": "0",
+      "sections": [
+        "prior-art",
+        "semantics",
+        "examples",
+        "api",
+        "references",
+        "prior-discussion"
+      ],
+      "build": "gulp",
+      "vscode": true
+    }
+  }
+}
