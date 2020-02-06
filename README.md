@@ -33,8 +33,8 @@ language itself has no mechanism for supplying a CSPRNG that can be used by prop
 ### Goals
 
 * Provide a single "source of truth" for generating cryptographically secure pseudo-random values within the language.
-* Provides a single location for mocking the CSPRNG, vs a method on each `TypedArray` prototype.
-* Does not introduce a new global namespace for cryptography, as specifying a `crypto` global in ECMA-262 could cause complications with how to specify it such that the Web cryptography APIs could be layered on top.
+* Provide a single location for mocking the CSPRNG, vs a method on each `TypedArray` prototype.
+* If introducing a new `crypto` global namespace for cryptography-related APIs in ECMA-262, we should ensure that the Web cryptography APIs could be layered on top.
 <!--#endregion:motivations-->
 
 <!--#region:prior-art-->
@@ -133,7 +133,7 @@ When abstract operation FillRandomValues is called with argument _view_, the fol
 <!--#region:todo-->
 # TODO
 
-The following is a high-level list of tasks to progress through each stage of the [TC39 proposal process](https://tc39.github.io/process-document/):
+The following is a high-level list of tasks to progress through each stage of the [TC39 proposal process](https://tc39.es/process-document/):
 
 ### Stage 1 Entrance Criteria
 
@@ -161,14 +161,14 @@ The following is a high-level list of tasks to progress through each stage of th
 * [ ] The ECMAScript editor has signed off on the [pull request][Ecma262PullRequest].  
 <!--#endregion:todo-->
 
-[Process]: https://tc39.github.io/process-document/
+[Process]: https://tc39.es/process-document/
 [Proposals]: https://github.com/tc39/proposals/
 [Grammarkdown]: http://github.com/rbuckton/grammarkdown#readme
 [Champion]: #status
 [Prose]: #motivations
 [Examples]: #examples
 [API]: #api
-[Specification]: https://rbuckton.github.io/proposal-arraybuffer-fillrandom
+[Specification]: #todo
 [Transpiler]: #todo
 [Stage3ReviewerSignOff]: #todo
 [Stage3EditorSignOff]: #todo
