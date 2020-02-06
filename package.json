@@ -1,8 +1,8 @@
 {
-  "name": "proposal-arraybuffer-fillrandom",
+  "name": "proposal-csprng",
   "version": "0.0.0",
   "private": true,
-  "description": "ArrayBuffer.fillRandom - CSRNG for ECMAScript",
+  "description": "Cryptographically Secure Pseudo-Random Number Generation for ECMAScript",
   "homepage": "https://github.com/rbuckton/proposal-arraybuffer-fillrandom#readme",
   "author": {
     "name": "Ron Buckton",
