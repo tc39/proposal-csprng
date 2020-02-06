@@ -2,7 +2,7 @@
 # Cryptographically Secure Pseudo-Random Number Generation (CSPRNG) for ECMAScript
 
 This proposes the addition of a user-addressable function that can be used to fill the 
-portion of an `ArrayBuffer` associated with a `TypedArray` or `DataView` with cryptographically secure pseudo-random number values.
+portion of an `ArrayBuffer` associated with a `TypedArray` with cryptographically secure pseudo-random number values.
 
 Portions of this proposal are derived from the [Web Cryptography API](https://w3c.github.io/webcrypto/#Crypto-method-getRandomValues)
 <!--#endregion:intro-->
@@ -121,7 +121,6 @@ When abstract operation FillRandomValues is called with argument _view_, the fol
 
 * [Web Cryptography API](https://w3c.github.io/webcrypto/#Crypto-method-getRandomValues)
 * [UUID Proposal](https://github.com/tc39/proposal-uuid)
-* [Original Strawman](https://gist.github.com/rbuckton/0777210dc3086e1a90375354b045a3a7)  
 <!--#endregion:references-->
 
 <!--#region:prior-discussion-->
@@ -168,7 +167,7 @@ The following is a high-level list of tasks to progress through each stage of th
 [Prose]: #motivations
 [Examples]: #examples
 [API]: #api
-[Specification]: #todo
+[Specification]: https://tc39.es/proposal-csprng/
 [Transpiler]: #todo
 [Stage3ReviewerSignOff]: #todo
 [Stage3EditorSignOff]: #todo
