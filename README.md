@@ -1,8 +1,8 @@
 <!--#region:intro-->
-# ArrayBuffer.fillRandom - A CSPRNG for ECMAScript
+# Cryptographically Secure Pseudo-Random Number Generation (CSPRNG) for ECMAScript
 
-This proposes the addition of a `fillRandom` static method to the global `ArrayBuffer` object that can be used to fill the 
-portion of an `ArrayBuffer` associated with a `TypedArray` or `DataView` with cryptographically-secure pseudo-random values.
+This proposes the addition of a user-addressable function that can be used to fill the 
+portion of an `ArrayBuffer` associated with a `TypedArray` or `DataView` with cryptographically-secure pseudo-random number values.
 
 Portions of this proposal are derived from the [Web Cryptography API](https://w3c.github.io/webcrypto/#Crypto-method-getRandomValues)
 <!--#endregion:intro-->
@@ -10,7 +10,7 @@ Portions of this proposal are derived from the [Web Cryptography API](https://w3
 <!--#region:status-->
 ## Status
 
-**Stage:** 0  
+**Stage:** 1  
 **Champion:** Ron Buckton (@rbuckton)  
 
 _For detailed status of this proposal see [TODO](#todo), below._  
@@ -77,9 +77,15 @@ ArrayBuffer.fillRandom(array);
 <!--#region:api-->
 # API
 
-## ArrayBuffer.fillRandom(view)
+We are still investigating the API surface area for this proposal. The intended API would be a user-addressable function that when called executes the [FillRandomValues](#fillrandomvalues-view) abstract operation, below.
 
-When `ArrayBuffer.fillRandom` is called with argument _view_, the following steps are taken:
+The Stage 0 API proposal exposed this as a static `ArrayBuffer.fillRandom` method, although we are continuing to investigate this space.
+
+# Abstract Operations
+
+## FillRandomValues (view)
+
+When abstract operation FillRandomValues is called with argument _view_, the following steps are taken:
 
 1. Perform ? RequireInternalSlot(_view_, \[\[TypedArrayName]]).
 1. Assert: _view_ has the \[\[ViewedArrayBuffer]], \[\[ByteLength]], and \[\[ByteOffset\]\] internal slots.
