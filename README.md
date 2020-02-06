@@ -161,8 +161,6 @@ The following is a high-level list of tasks to progress through each stage of th
 * [ ] The ECMAScript editor has signed off on the [pull request][Ecma262PullRequest].  
 <!--#endregion:todo-->
 
-<!--#region:links-->
-<!-- The following links are used throughout the README: -->
 [Process]: https://tc39.github.io/process-document/
 [Proposals]: https://github.com/tc39/proposals/
 [Grammarkdown]: http://github.com/rbuckton/grammarkdown#readme
@@ -171,13 +169,10 @@ The following is a high-level list of tasks to progress through each stage of th
 [Examples]: #examples
 [API]: #api
 [Specification]: https://rbuckton.github.io/proposal-arraybuffer-fillrandom
-
-<!-- The following links should be supplied as the proposal advances: -->
-[Transpiler]: #todo <!-- TODO: provide link to github PR -->
-[Stage3ReviewerSignOff]: #todo <!-- TODO: provide link to github issue -->
-[Stage3EditorSignOff]: #todo <!-- TODO: provide link to github issue -->
-[Test262PullRequest]: #todo <!-- TODO: provide link to github PR -->
-[Implementation1]: #todo <!-- TODO: provide link to github issue -->
-[Implementation2]: #todo <!-- TODO: provide link to github issue -->
-[Ecma262PullRequest]: #todo <!-- TODO: provide link to github PR -->
-<!--#endregion:links-->
+[Transpiler]: #todo
+[Stage3ReviewerSignOff]: #todo
+[Stage3EditorSignOff]: #todo
+[Test262PullRequest]: #todo
+[Implementation1]: #todo
+[Implementation2]: #todo
+[Ecma262PullRequest]: #todo
