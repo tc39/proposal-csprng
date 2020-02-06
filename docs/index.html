@@ -1,8 +1,23 @@
 <!doctype html>
 <head><meta charset="utf-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
-<link rel="spec" href="es2015">
-<title>Cryptographically Secure Pseudo-Random Number Generation for ECMAScript</title><script type="application/json" id="menu-search-biblio">[{"type":"clause","id":"sec-intro","aoid":null,"title":"Introduction","titleHTML":"Introduction","number":"","namespace":"<no location>","location":"","referencingIds":[],"key":"Introduction"},{"type":"clause","id":"sec-copyright-and-software-license","aoid":null,"title":"Copyright & Software License","titleHTML":"Copyright &amp; Software License","number":"A","namespace":"<no location>","location":"","referencingIds":[],"key":"Copyright & Software License"}]</script><script>"use strict";
+<link rel="spec" href="es2019">
+<style>
+  #metadata-block {
+    margin: 4em 0;
+    padding: 10px;
+    border: 1px solid #ee8421;
+  }
+  #metadata-block h1 {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+  #metadata-block > ul {
+    list-style-type: none;
+    margin: 0; padding: 0;
+  }
+</style>
+<title>Cryptographically Secure Pseudo-Random Number Generation for ECMAScript</title><script type="application/json" id="menu-search-biblio">[{"type":"table","id":"table-7","number":1,"caption":"Table 1: Well-Known Intrinsic Objects","referencingIds":[],"namespace":"<no location>","location":"","key":"Table 1: Well-Known Intrinsic Objects"},{"type":"clause","id":"sec-well-known-intrinsic-objects","aoid":null,"title":"Well-Known Intrinsic Objects","titleHTML":"Well-Known Intrinsic Objects","number":"1","namespace":"<no location>","location":"","referencingIds":[],"key":"Well-Known Intrinsic Objects"},{"type":"term","term":"crypto","refId":"sec-crypto-object","referencingIds":[],"namespace":"<no location>","location":"","key":"crypto"},{"type":"term","term":"%crypto%","refId":"sec-crypto-object","referencingIds":[],"namespace":"<no location>","location":"","key":"%crypto%"},{"type":"term","term":"%CryptoPrototype%","refId":"sec-%cryptoprototype%-object","referencingIds":[],"namespace":"<no location>","location":"","key":"%CryptoPrototype%"},{"type":"clause","id":"sec-%cryptoprototype%-object","aoid":null,"title":"The %CryptoPrototype% Object","titleHTML":"The %CryptoPrototype% Object","number":"2.1.1","namespace":"<no location>","location":"","referencingIds":["_ref_1","_ref_3","_ref_4"],"key":"The %CryptoPrototype% Object"},{"type":"clause","id":"sec-%cryptoprototype%-getrandomvalues","aoid":null,"title":"%CryptoPrototype%.getRandomValues ( array )","titleHTML":"%CryptoPrototype%.getRandomValues ( <var>array</var> )","number":"2.1.2","namespace":"<no location>","location":"","referencingIds":[],"key":"%CryptoPrototype%.getRandomValues ( array )"},{"type":"clause","id":"sec-%cryptoprototype%-@@tostringtag","aoid":null,"title":"%CryptoPrototype% [ @@toStringTag ]","titleHTML":"%CryptoPrototype% [ @@toStringTag ]","number":"2.1.3","namespace":"<no location>","location":"","referencingIds":[],"key":"%CryptoPrototype% [ @@toStringTag ]"},{"type":"clause","id":"sec-crypto-object","aoid":null,"title":"The crypto Object","titleHTML":"<ins>The crypto Object</ins>","number":"2.1","namespace":"<no location>","location":"","referencingIds":["_ref_0","_ref_2"],"key":"The crypto Object"},{"type":"clause","id":"sec-structured-data","aoid":null,"title":"Structured Data","titleHTML":"Structured Data","number":"2","namespace":"<no location>","location":"","referencingIds":[],"key":"Structured Data"},{"type":"clause","id":"sec-copyright-and-software-license","aoid":null,"title":"Copyright & Software License","titleHTML":"Copyright &amp; Software License","number":"A","namespace":"<no location>","location":"","referencingIds":[],"key":"Copyright & Software License"}]</script><script>"use strict";
 
 function Search(menu) {
   this.menu = menu;
@@ -1819,15 +1834,152 @@ li.menu-search-result-term:before {
     display: none; 
   }
 }
-</style></head><body><div id="menu-toggle">☰</div><div id="menu-spacer"></div><div id="menu"><div id="menu-search"><input type="text" id="menu-search-box" placeholder="Search..."><div id="menu-search-results" class="inactive"></div></div><div id="menu-pins"><div class="menu-pane-header">Pins</div><ul id="menu-pins-list"></ul></div><div class="menu-pane-header">Table of Contents</div><div id="menu-toc"><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-intro" title="Introduction">Introduction</a></li><li><span class="item-toggle-none"></span><a href="#sec-copyright-and-software-license" title="Copyright &amp; Software License"><span class="secnum">A</span> Copyright &amp; Software License</a></li></ol></div></div><div id="spec-container"><h1 class="version first">Stage 1 Draft / February 6, 2020</h1><h1 class="title">Cryptographically Secure Pseudo-Random Number Generation for ECMAScript</h1>
+</style></head><body><div id="menu-toggle">☰</div><div id="menu-spacer"></div><div id="menu"><div id="menu-search"><input type="text" id="menu-search-box" placeholder="Search..."><div id="menu-search-results" class="inactive"></div></div><div id="menu-pins"><div class="menu-pane-header">Pins</div><ul id="menu-pins-list"></ul></div><div class="menu-pane-header">Table of Contents</div><div id="menu-toc"><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-well-known-intrinsic-objects" title="Well-Known Intrinsic Objects"><span class="secnum">1</span> Well-Known Intrinsic Objects</a></li><li><span class="item-toggle">◢</span><a href="#sec-structured-data" title="Structured Data"><span class="secnum">2</span> Structured Data</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-crypto-object" title="The crypto Object"><span class="secnum">2.1</span> <ins>The crypto Object</ins></a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-%cryptoprototype%-object" title="The %CryptoPrototype% Object"><span class="secnum">2.1.1</span> The %CryptoPrototype% Object</a></li><li><span class="item-toggle-none"></span><a href="#sec-%cryptoprototype%-getrandomvalues" title="%CryptoPrototype%.getRandomValues ( array )"><span class="secnum">2.1.2</span> %CryptoPrototype%.getRandomValues ( <var>array</var> )</a></li><li><span class="item-toggle-none"></span><a href="#sec-%cryptoprototype%-@@tostringtag" title="%CryptoPrototype% [ @@toStringTag ]"><span class="secnum">2.1.3</span> %CryptoPrototype% [ @@toStringTag ]</a></li></ol></li></ol></li><li><span class="item-toggle-none"></span><a href="#sec-copyright-and-software-license" title="Copyright &amp; Software License"><span class="secnum">A</span> Copyright &amp; Software License</a></li></ol></div></div><div id="spec-container"><h1 class="version first">Stage 1 Draft / February 6, 2020</h1><h1 class="title">Cryptographically Secure Pseudo-Random Number Generation for ECMAScript</h1>
 
-<emu-intro id="sec-intro">
-  <h1>Introduction</h1>
-  <p>Forthcoming</p>
-  <p>See  <a href="https://github.com/rbuckton/proposal-arraybuffer-fillrandom#readme">the proposal repository</a> for background material and discussion.</p>
-</emu-intro>
+<div id="metadata-block">
+  <h1>Contributing to this Proposal</h1>
+  <p>This proposal is developed on GitHub with the help of the ECMAScript community. There are a number of ways to contribute to the development of this specification:</p>
+  <ul>
+    <li>GitHub Repository:  <a href="https://github.com/tc39/proposal-csprng">https://github.com/tc39/proposal-csprng</a></li>
+    <li>Issues:  <a href="https://github.com/tc39/proposal-csprng/issues">All Issues</a>,  <a href="https://github.com/tc39/proposal-csprng/issues/new">File a New Issue</a></li>
+    <li>Pull Requests:  <a href="https://github.com/tc39/proposal-csprng/pulls">All Pull Requests</a>,  <a href="https://github.com/tc39/proposal-csprng/pulls/new">Create a New Pull Request</a></li>
+    <!-- <li>Test Suite: <a href="https://github.com/tc39/test262">Test262</a></li> -->
+    <li>
+      <p>Community:</p>
+      <ul>
+        <li>Discourse:  <a href="https://es.discourse.group">https://es.discourse.group</a></li>
+        <li>IRC:  <a href="ircs://irc.freenode.net:6667">#tc39</a> on  <a href="https://freenode.net/kb/answer/chat">freenode</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
 
-<emu-annex id="sec-copyright-and-software-license">
+<emu-import href="sec-well-known-intrinsic-objects-patch.html"><emu-clause id="sec-well-known-intrinsic-objects">
+  <h1><span class="secnum">1</span> Well-Known Intrinsic Objects</h1>
+  <emu-table id="table-7" caption="Well-Known Intrinsic Objects"><figure><figcaption>Table 1: Well-Known Intrinsic Objects</figcaption>
+    <table>
+      <tbody>
+      <tr>
+        <th>
+          Intrinsic Name
+        
+        </th>
+        <th>
+          Global Name
+        
+        </th>
+        <th>
+          ECMAScript Language Association
+        
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <ins><emu-xref href="#sec-crypto-object" id="_ref_2"><a href="#sec-crypto-object">%crypto%</a></emu-xref></ins>
+        </td>
+        <td>
+          <ins><code>crypto</code></ins>
+        </td>
+        <td>
+          <ins>The <code>crypto</code> object (<emu-xref href="#sec-crypto-object" id="_ref_0"><a href="#sec-crypto-object">2.1</a></emu-xref>).</ins>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ins><emu-xref href="#sec-%cryptoprototype%-object" id="_ref_3"><a href="#sec-%cryptoprototype%-object">%CryptoPrototype%</a></emu-xref></ins>
+        </td>
+        <td>
+        </td>
+        <td>
+          <ins>The prototype of the <code>crypto</code> object (<emu-xref href="#sec-%cryptoprototype%-object" id="_ref_1"><a href="#sec-%cryptoprototype%-object">2.1.1</a></emu-xref>). Intended for compatibility with the  <a href="https://w3c.github.io/webcrypto">Web Cryptography API</a>.</ins>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </figure></emu-table>
+</emu-clause></emu-import>
+<emu-import href="sec-structured-data-patch.html"><emu-clause id="sec-structured-data">
+  <h1><span class="secnum">2</span> Structured Data</h1>
+  <emu-clause id="sec-crypto-object">
+    <h1><span class="secnum">2.1</span> <ins>The crypto Object</ins></h1>
+    <p>The  <dfn>crypto</dfn> object:</p>
+    <li>is the intrinsic object  <dfn>%crypto%</dfn>.
+    
+    </li><li>is the initial value of the <emu-val>"crypto"</emu-val> property of the <emu-xref href="#global-object"><a href="https://tc39.github.io/ecma262/#global-object">global object</a></emu-xref>.
+    
+    </li><li>is an ordinary object.
+    
+    </li><li>has a [[Prototype]] internal slot whose value is <emu-xref href="#sec-%cryptoprototype%-object" id="_ref_4"><a href="#sec-%cryptoprototype%-object">%CryptoPrototype%</a></emu-xref>.
+    
+    </li><li>does not have a [[Construct]] internal method; it cannot be used as a constructor with the <code>new</code> operator.
+    
+    </li><li>does not have a [[Call]] internal method; it cannot be invoked as a function.
+    
+    <emu-clause id="sec-%cryptoprototype%-object">
+      <h1><span class="secnum">2.1.1</span> The %CryptoPrototype% Object</h1>
+      <p>The  <dfn>%CryptoPrototype%</dfn> object:</p>
+      </emu-clause></li><li>has a [[Prototype]] internal slot whose value is %Object.prototype%.
+      
+      </li><li>is an ordinary object.
+      
+      <emu-clause id="sec-%cryptoprototype%-getrandomvalues">
+        <h1><span class="secnum">2.1.2</span> %CryptoPrototype%.getRandomValues ( <var>array</var> )</h1>
+        <emu-alg><ol><li>Perform ?&nbsp;RequireInternalSlot(<var>array</var>, [[TypedArrayName]]).</li><li>Assert: <var>array</var> has the [[ViewedArrayBuffer]], [[ByteLength]], and [[ByteOffset\]\] internal slots.</li><li>If <var>array</var>.[[TypedArrayName]] is not one of <code>"Int8Array"</code>, <code>"Uint8Array"</code>, <code>"Uint8ClampedArray"</code>, <code>"Int16Array"</code>,
+             <code>"Uint16Array"</code>, <code>"Int32Array"</code>, <code>"Uint32Array"</code>, <code>"BigInt64Array"</code>, or <code>"BigUint64Array"</code>, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>buffer</var> be <var>array</var>.[[ViewedArrayBuffer]].</li><li>If !&nbsp;<emu-xref aoid="IsDetachedBuffer" id="_ref_5"><a href="https://tc39.github.io/ecma262/#sec-isdetachedbuffer">IsDetachedBuffer</a></emu-xref>(<var>buffer</var>) is <emu-const>true</emu-const>, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>byteLength</var> be <var>array</var>.[[ByteLength]].</li><li>If <var>byteLength</var> is greater than 65536, throw a <emu-val>RangeError</emu-val> exception.</li><li>Let <var>byteOffset</var> be <var>array</var>.[[ByteOffset]].</li><li>Let <var>byteEndOffset</var> be <var>byteOffset</var> + <var>byteLength</var>.</li><li>Overwrite the elements of <var>buffer</var> from index <var>byteOffset</var> (inclusive) through index <var>byteEndOffset</var> (exclusive)
+             with cryptographically secure random values.</li><li>Return <var>array</var>.
+        </li></ol></emu-alg>
+        <emu-note><span class="note">Note 1</span><div class="note-contents">
+          <p>
+          Implementations should generate cryptographically secure random values using well-established cryptographic
+          pseudo-random number generators seeded with high-quality entropy, such as from an operating-system entropy
+          source (e.g., "/dev/urandom"). This specification provides no lower-bound on the information theoretic entropy
+          present in cryptographically secure random values, but implementations should make a best effort to provide as
+          much entropy as practicable.
+          
+          </p>
+        </div></emu-note>
+        <emu-note><span class="note">Note 2</span><div class="note-contents">
+          <p>
+          This interface defines a synchronous method for obtaining cryptographically secure random values. While some 
+          devices and implementations may support truly random cryptographic number generators or provide interfaces that 
+          block when there is insufficient entropy, implementations are discouraged from using these sources when 
+          implementing getRandomValues, both for performance and to avoid depleting the system of entropy. Instead, these 
+          sources should be used to seed a cryptographic pseudo-random number generator that can then return suitable 
+          values efficiently.
+          
+          </p>
+        </div></emu-note>
+        <emu-note><span class="note">Note 3</span><div class="note-contents">
+          <p>
+          The above algorithm and notes were derived from  <a href="https://w3c.github.io/webcrypto/#Crypto-description">relevant sections</a>
+          of the  <a href="https://w3c.github.io/webcrypto/">Web Cryptography API</a> with the intent to preserve algorithm compatibility 
+          between the two implementations.
+          
+          </p>
+          <p>
+          The  <a href="https://w3c.github.io/webcrypto/">Web Cryptography API</a> is 
+          Copyright © 2018  <a href="http://www.w3.org/">World Wide Web Consortium</a>, (<a href="http://www.csail.mit.edu/">MIT</a>, 
+           
+          <a href="http://www.ercim.org/">ERCIM</a>,  <a href="http://www.keio.ac.jp/">Keio</a>,  <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
+           
+          <a href="http://www.w3.org/Consortium/Legal/2015/doc-license">http://www.w3.org/Consortium/Legal/2015/doc-license</a>
+          </p>
+          <p>
+          The  <a href="https://w3c.github.io/webcrypto/">Web Cryptography API</a> is an Editors Draft, per the 
+           
+          <a href="https://www.w3.org/2018/Process-20180201/">1 February 2018 W3C Process Document</a>.
+          
+          </p>
+        </div></emu-note>
+      </emu-clause>
+      <emu-clause id="sec-%cryptoprototype%-@@tostringtag">
+        <h1><span class="secnum">2.1.3</span> %CryptoPrototype% [ @@toStringTag ]</h1>
+        <p>The initial value of the @@toStringTag property is the String value <emu-val>"Crypto"</emu-val>.</p>
+        <p>This property has the attributes { [[Writable]]: <emu-val>false</emu-val>, [[Enumerable]]: <emu-val>false</emu-val>, [[Configurable]]: <emu-val>true</emu-val> }.</p>
+      </emu-clause>
+    
+  
+</li></emu-clause></emu-clause><emu-annex id="sec-copyright-and-software-license">
       <h1><span class="secnum">A</span> Copyright &amp; Software License</h1>
       
       <h2>Copyright Notice</h2>
@@ -1846,4 +1998,5 @@ li.menu-search-result-term:before {
 
 <p>THIS SOFTWARE IS PROVIDED BY THE ECMA INTERNATIONAL "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL ECMA INTERNATIONAL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
 
-    </emu-annex></div></body>
+    </emu-annex></emu-import>
+</div></body>
