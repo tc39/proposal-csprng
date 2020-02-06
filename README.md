@@ -64,14 +64,12 @@ language itself has no mechanism for supplying a CSPRNG that can be used by prop
 <!--#endregion:semantics-->
 
 <!--#region:examples-->
+<!--
 # Examples
 
 > TODO: Provide examples of the proposal.
 
-```js
-const array = new Uint8Array(16);
-ArrayBuffer.fillRandom(array);
-```
+-->
 <!--#endregion:examples-->
 
 <!--#region:api-->
